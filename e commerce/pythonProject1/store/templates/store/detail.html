@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+{% block content %}
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-3 mb-5">
+        <div class="card">
+          <a href="{{ product.get_absolute_url }}">
+            <img src="{{product.image.url}}" class="card-img-top mt-3" width="200px" height="200px" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.title}}</h5>
+              <h6 class="card-title">From: {{product.category}}</h6>
+              <div class="col-6">
+
+                <h5>${{product.price}}</h5>
+                By: <small style="font-family: fantasy; letter-spacing: 0.5mm;">{{product.author}}</small>
+
+              </div>
+              <p class="card-text">{{product.description}}</p>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div> -->
+
+
+
+ <div class="container-fluid">
+    <div class="row">
+      <div class="mb-5">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{product.image.url}}" class="img-fluid" width="500" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">{{product.title}}</h3>
+                <p class="card-text">{{product.full_description}}</p>
+                <h5 class="card-title">${{product.price}}</h5>
+
+                <p class="card-text"><small class="text-body-secondary">{{product.author}}</small></p>
+                <p>
+                  <a href="#" class="btn btn-success my-2">BUY</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<header>
+  <div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-3 mb-5">
+        <div class="card">
+          <a href="{{ product.get_absolute_url }}">
+            <img src="{{product.image.url}}" class="card-img-top mt-3" width="200px" height="200px" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.title}}</h5>
+              <h6 class="card-title">From: {{product.category}}</h6>
+              <div class="col-6">
+
+                <h5>${{product.price}}</h5>
+                By: <small style="font-family: fantasy; letter-spacing: 0.5mm;">{{product.author}}</small>
+
+              </div>
+              <p class="card-text">{{product.description}}</p>
+            </div>
+          </a>
+        </div>
+        
+      </div> 
+      {% endfor %}
+     </div>
+  </div>
+
+
+
+
+</header>
+{% endblock %}
